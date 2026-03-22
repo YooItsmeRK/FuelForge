@@ -1,3 +1,4 @@
+<?php if (session_status() === PHP_SESSION_NONE) session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,56 +11,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid px-lg-5">
-      <a class="navbar-brand text-decoration-none" href="index.html">
-        <div class="logo-container d-flex align-items-center">
-          <img src="logo.png" alt="FuelForge"
-            style="height: 45px; object-fit: contain; transform: scale(2.2); transform-origin: left center;">
-        </div>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-center" id="navMenu">
-        <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="recipes.html">Recipes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="submit.html">Submit Recipes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item d-lg-none mt-3">
-            <a href="get_started.html" class="btn btn-get-started w-100">Get Started</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="d-none d-lg-flex ms-auto align-items-center">
-        <!-- Replaced red button with logo based on latest mockup -->
-        <div
-          style="font-family: 'Cinzel', serif; font-weight: 700; font-size: 1.5rem; text-align: left; line-height: 1; color: #fff;">
-          Recipes <span style="color: #ff5722; font-size: 1.1rem; vertical-align: middle;">FOR</span><br>
-          <span style="font-size: 1.6rem; color: #ff5722;">R</span>eal <span style="font-size: 1.6rem;">M</span>en
-        </div>
-      </div>
-    </div>
-  </nav>
+  <?php include 'includes/navbar.php'; ?>
 
   <!-- Recipes Header Section -->
   <section class="section-padding text-center border-bottom border-dark pb-5">
@@ -147,14 +105,14 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p class="mb-0">© 2026 FuelForge | Recipes For Real Men</p>
+      <p class="mb-0">Ãƒâ€šÃ‚Â© 2026 FuelForge | Recipes For Real Men</p>
     </div>
   </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
